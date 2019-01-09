@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnPlot = new System.Windows.Forms.Button();
@@ -51,6 +51,7 @@
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.табилцаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plotGraphBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database)).BeginInit();
@@ -61,37 +62,38 @@
             // 
             // chart1
             // 
-            chartArea1.AxisX.MinorTickMark.Enabled = true;
-            chartArea1.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisX.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisX.Title = "Температура, град. С";
-            chartArea1.AxisY.IsReversed = true;
-            chartArea1.AxisY.MinorTickMark.Enabled = true;
-            chartArea1.AxisY.Title = "Глубина скважины, м";
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(393, 27);
+            chartArea4.AxisX.MinorTickMark.Enabled = true;
+            chartArea4.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea4.AxisX.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea4.AxisX.Title = "Температура, град. С";
+            chartArea4.AxisY.IsReversed = true;
+            chartArea4.AxisY.MinorTickMark.Enabled = true;
+            chartArea4.AxisY.Title = "Глубина скважины, м";
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Right;
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
+            this.chart1.Location = new System.Drawing.Point(405, 0);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.CustomProperties = "IsXAxisQuantitative=False, EmptyPointValue=Zero";
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Values";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(618, 428);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.CustomProperties = "IsXAxisQuantitative=False, EmptyPointValue=Zero";
+            series4.IsValueShownAsLabel = true;
+            series4.Legend = "Legend1";
+            series4.Name = "Values";
+            this.chart1.Series.Add(series4);
+            this.chart1.Size = new System.Drawing.Size(618, 492);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            title1.Name = "Title";
-            title1.Text = "Распределение температуры по глубине скважины";
-            this.chart1.Titles.Add(title1);
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title4.Name = "Title";
+            title4.Text = "Распределение температуры по глубине скважины";
+            this.chart1.Titles.Add(title4);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(252, 299);
+            this.btnSave.Location = new System.Drawing.Point(289, 135);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 2;
@@ -101,7 +103,7 @@
             // 
             // btnPlot
             // 
-            this.btnPlot.Location = new System.Drawing.Point(302, 432);
+            this.btnPlot.Location = new System.Drawing.Point(289, 424);
             this.btnPlot.Name = "btnPlot";
             this.btnPlot.Size = new System.Drawing.Size(75, 23);
             this.btnPlot.TabIndex = 3;
@@ -134,7 +136,7 @@
             this.dataGridView.DataSource = this.plotGraphBindingSource;
             this.dataGridView.Location = new System.Drawing.Point(12, 27);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(352, 250);
+            this.dataGridView.Size = new System.Drawing.Size(352, 83);
             this.dataGridView.TabIndex = 4;
             // 
             // idDataGridViewTextBoxColumn
@@ -157,7 +159,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(124, 299);
+            this.btnLoad.Location = new System.Drawing.Point(161, 135);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
             this.btnLoad.TabIndex = 5;
@@ -172,7 +174,7 @@
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 467);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1023, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(402, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -189,7 +191,7 @@
             this.настройкиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1023, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(402, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -204,7 +206,7 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.ВыходToolStripMenuItem_Click);
             // 
@@ -219,16 +221,26 @@
             // табилцаToolStripMenuItem
             // 
             this.табилцаToolStripMenuItem.Name = "табилцаToolStripMenuItem";
-            this.табилцаToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.табилцаToolStripMenuItem.Text = "Табилца";
+            this.табилцаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.табилцаToolStripMenuItem.Text = "Таблица";
+            // 
+            // splitter1
+            // 
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.splitter1.Location = new System.Drawing.Point(402, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 492);
+            this.splitter1.TabIndex = 8;
+            this.splitter1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 492);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.btnPlot);
@@ -271,6 +283,7 @@
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem табилцаToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.Splitter splitter1;
     }
 }
 
